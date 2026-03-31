@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component id="Calculator">
+  <registration
+    description="WSCOV sample calculator"
+    progid="Wscov.SampleCalculator"
+    version="1.0"
+    classid="{C20DD965-BE02-4E9A-A2F2-7E97E0F5CF45}" />
+  <public>
+    <method name="Add" />
+    <method name="Sub" internalName="CalcSub" />
+  </public>
+  <script language="VBScript"><![CDATA[
+Option Explicit
+
+Function Add(a, b)
+  Add = CLng(a) + CLng(b)
+End Function
+
+Function CalcSub(a, b)
+  CalcSub = CLng(a) - CLng(b)
+End Function
+  ]]></script>
+</component>

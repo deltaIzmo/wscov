@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component id="Branchy">
+  <registration
+    description="WSCOV branch/continuation sample"
+    progid="Wscov.Branchy"
+    version="1.0"
+    classid="{5D0E6DA0-2B24-4BD9-8882-9A62E5CF2B09}" />
+  <public>
+    <method name="Score" />
+  </public>
+  <script language="VBScript"><![CDATA[
+Option Explicit
+
+Function Score(n, a, b)
+  Dim x
+  x = CLng(a) + _
+      CLng(b)
+
+  If CLng(n) > 0 Then
+    x = x + 1
+  Else
+    x = x - 1
+  End If
+
+  Select Case CLng(n)
+    Case 0
+      Score = x + 10
+    Case Else
+      Score = x + 20
+  End Select
+End Function
+  ]]></script>
+</component>
